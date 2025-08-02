@@ -1,0 +1,197 @@
+/* events_gallery.css */
+
+/* 1. Events Calendar Styles */
+/* ================================== */
+#events-calendar {
+    --calendar-border: 1px solid var(--border-color);
+}
+
+.calendar-header h3 {
+    font-family: var(--font-family-sans-serif);
+    font-weight: 600;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.calendar-grid > div {
+    padding: 0.75rem 0.5rem;
+    text-align: center;
+    font-weight: 500;
+    aspect-ratio: 1 / 1; /* Makes the cells square */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius-sm);
+    transition: var(--transition-base);
+}
+
+.weekday {
+    font-weight: var(--font-weight-bold);
+    color: var(--color-secondary);
+    font-size: 0.9rem;
+    aspect-ratio: auto;
+    padding-bottom: 0.5rem;
+}
+
+.day.other-month {
+    color: var(--text-color-muted);
+    opacity: 0.6;
+}
+
+.day.today {
+    background-color: var(--color-primary);
+    color: white;
+    font-weight: var(--font-weight-bold);
+    border: 2px solid var(--color-primary-dark);
+}
+
+.day.event {
+    position: relative;
+    cursor: pointer;
+    background-color: var(--highlight);
+    color: var(--color-success);
+    font-weight: var(--font-weight-bold);
+}
+
+.day.event:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow);
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+.day.event::after {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+}
+
+.day.event:hover::after {
+    background-color: #fff;
+}
+
+.day.today.event {
+    color: white;
+    background-color: var(--color-secondary);
+}
+
+/* 2. Media Gallery Styles */
+/* ================================== */
+.album-card {
+    position: relative;
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    cursor: pointer;
+    transition: var(--transition-base);
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid transparent;
+    background-color: var(--bg-secondary-color);
+}
+
+.album-card .album-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-base);
+}
+
+.album-card:hover .album-bg {
+    transform: scale(1.1);
+    filter: blur(2px);
+}
+
+.album-card .album-card-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    background-color: rgba(var(--color-secondary-rgb), 0.7);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition-base);
+}
+
+.album-card:hover .album-card-content {
+    background-color: rgba(var(--color-primary-rgb), 0.8);
+}
+
+.album-card.active {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 4px var(--focus-ring-color);
+}
+
+.album-card h4 {
+    color: white;
+    font-family: var(--font-family-sans-serif);
+    font-weight: 700;
+    margin: 0;
+}
+
+.album-card p {
+    color: rgba(255,255,255,0.9);
+    font-size: 0.9rem;
+}
+
+
+.gallery-item {
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+}
+
+.gallery-item img {
+    transition: transform 0.3s ease;
+}
+
+.gallery-item a:hover img {
+    transform: scale(1.05);
+}
+
+/* SweetAlert2 Customizations */
+.swal2-title {
+    color: var(--color-secondary) !important;
+    font-family: var(--font-family-serif);
+}
+.swal2-html-container {
+    color: var(--text-color) !important;
+}
+.swal2-confirm {
+    background-color: var(--color-primary) !important;
+}
+.swal2-confirm:focus {
+    box-shadow: 0 0 0 0.25rem var(--focus-ring-color) !important;
+}
+
+/* GLightbox Customizations */
+.gslide-title {
+    font-family: var(--font-family-sans-serif);
+    font-weight: 600;
+    color: white;
+    background-color: rgba(var(--color-primary-rgb), 0.8);
+    padding: 0.5rem 1rem;
+}
+
+.gslide-description {
+    background: none;
+}

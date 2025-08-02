@@ -1,0 +1,154 @@
+/* Admin Editor Page Specific Styles */
+
+/* Main Layout & Sidebar */
+#admin-wrapper {
+    overflow-x: hidden;
+}
+
+#admin-sidebar {
+    min-height: 100vh;
+    width: 250px;
+    background-color: var(--bg-secondary-color);
+    border-right: 1px solid var(--border-color);
+    transition: margin 0.25s ease-out;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+#admin-wrapper.toggled #admin-sidebar {
+    margin-left: -250px;
+}
+
+#page-content-wrapper {
+    min-width: 100vw;
+    flex-grow: 1;
+}
+
+#admin-wrapper.toggled #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+}
+
+.sidebar-header {
+    padding: 0.5rem 0 1.5rem 0;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 1rem;
+}
+
+.sidebar-header .navbar-brand {
+    color: var(--color-secondary);
+    font-weight: 600;
+}
+
+#admin-sidebar .nav-link {
+    color: var(--text-color-muted);
+    padding: 0.75rem 1rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+#admin-sidebar .nav-link.active, 
+#admin-sidebar .nav-link:hover {
+    color: #fff;
+    background-color: var(--color-primary);
+    border-radius: var(--border-radius-lg);
+}
+
+#admin-sidebar .nav-link.active i, 
+#admin-sidebar .nav-link:hover i {
+    color: #fff;
+}
+
+
+@media(min-width: 768px) {
+    #admin-wrapper {
+        min-width: 0;
+        width: 100%;
+    }
+    #admin-sidebar {
+        margin-left: 0;
+    }
+    #admin-wrapper.toggled #admin-sidebar {
+        margin-left: -250px;
+    }
+    #page-content-wrapper {
+        min-width: 0;
+        width: 100%;
+        padding-left: 250px; 
+    }
+    #admin-wrapper.toggled #page-content-wrapper {
+        padding-left: 0;
+    }
+}
+
+/* Page Content Styles */
+
+.editor-banner {
+    height: 200px;
+    object-fit: cover;
+}
+
+.wysiwyg-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    border-bottom: 0 !important;
+}
+
+#contentArea {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top: 0;
+    resize: vertical;
+    min-height: 400px;
+}
+
+#contentArea:focus {
+    box-shadow: none;
+    border-color: var(--color-primary);
+}
+
+/* SEO Preview Card */
+.google-preview {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+}
+
+.google-preview-title {
+    color: #1a0dab;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin: 0;
+    text-decoration: none;
+}
+
+.google-preview-url {
+    color: #006621;
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.google-preview-description {
+    color: #4d5156;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin-top: 4px;
+}
+
+/* Accordion Customization */
+.accordion-button {
+    font-weight: 600;
+    color: var(--color-secondary);
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: rgba(var(--color-primary-rgb), 0.1);
+    color: var(--color-primary);
+    box-shadow: inset 0 -1px 0 var(--border-color);
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem var(--focus-ring-color);
+}

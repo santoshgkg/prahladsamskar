@@ -1,0 +1,111 @@
+/* admin_events.css */
+
+/* Main Layout */
+#admin-wrapper {
+  min-height: 100vh;
+}
+
+#sidebar {
+  width: 280px;
+  background-color: var(--bg-secondary-color);
+  transition: all 0.3s;
+  border-right: 1px solid var(--border-color);
+  flex-shrink: 0; /* Prevents sidebar from shrinking */
+}
+
+#main-content {
+  background-color: var(--bg-color);
+}
+
+.bg-pattern {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px), linear-gradient(to right, rgba(0, 0, 0, 0.02) 1px, var(--bg-color) 1px);
+    background-size: 1.5rem 1.5rem;
+}
+
+/* Sidebar Navigation */
+#sidebar .nav-link {
+  color: var(--text-color-muted);
+  font-size: 0.95rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--border-radius-sm);
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+#sidebar .nav-link:hover,
+#sidebar .nav-link.active {
+  background-color: rgba(var(--color-primary-rgb), 0.1);
+  color: var(--color-primary);
+}
+
+#sidebar .logo-img {
+  height: 60px;
+  width: auto;
+  transition: transform 0.2s ease-in-out;
+}
+
+#sidebar .logo-img:hover {
+    transform: scale(1.05);
+}
+
+/* Top Header Bar */
+.navbar-light {
+  background-color: var(--bg-secondary-color) !important;
+}
+
+/* Table Styles */
+.table thead th {
+  font-weight: 600;
+  color: var(--text-color);
+  border-bottom-width: 2px;
+  border-color: var(--border-color);
+}
+
+.table .btn {
+  --bs-btn-padding-y: .25rem; 
+  --bs-btn-padding-x: .5rem; 
+  --bs-btn-font-size: .75rem;
+}
+
+.badge {
+  font-weight: 500;
+  padding: 0.4em 0.6em;
+}
+
+/* Modal Styles */
+#eventEditorModal .modal-header {
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+#eventEditorModal .modal-header .modal-title {
+    color: var(--color-secondary);
+}
+
+#eventEditorModal textarea {
+    min-height: 150px;
+    font-size: 0.95rem;
+}
+
+
+/* Pagination Customization */
+.pagination .page-link {
+    color: var(--color-primary);
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: #fff;
+}
+
+.pagination .page-item.disabled .page-link {
+    color: var(--text-color-muted);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  #main-content {
+    width: 100%;
+  }
+}

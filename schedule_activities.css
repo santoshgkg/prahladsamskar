@@ -1,0 +1,91 @@
+/* Prahlad Samskar School - Schedule & Activities Page Stylesheet */
+
+/* Adjust main content position to account for the fixed navbar */
+.main-content {
+    padding-top: 120px; /* Provides space below the fixed header */
+    padding-bottom: 60px;
+}
+
+.page-header-section {
+    margin-bottom: 4rem;
+}
+
+.schedule-card {
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-lg);
+    transition: var(--transition-base);
+    background-color: var(--bg-secondary-color);
+}
+
+.schedule-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.schedule-card .card-img-top {
+    height: 250px;
+    object-fit: cover;
+    border-top-left-radius: var(--border-radius-lg);
+    border-top-right-radius: var(--border-radius-lg);
+}
+
+.schedule-card .list-group-item {
+    background-color: transparent;
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 1.25rem;
+}
+
+.schedule-card .list-group-item:last-child {
+    border-bottom: none;
+}
+
+/* Custom badge for schedule timings */
+.bg-primary-soft {
+    background-color: rgba(var(--color-primary-rgb), 0.1);
+}
+
+.text-primary-dark {
+    color: #c87612;
+}
+
+/* Custom styled notice box */
+.notice-box {
+    background-color: var(--bg-secondary-color);
+    border-left: 5px solid var(--color-info);
+    box-shadow: var(--shadow-sm);
+    border-radius: var(--border-radius);
+    color: var(--text-color);
+}
+
+.notice-box .alert-heading {
+    color: var(--color-secondary);
+}
+
+.notice-box a {
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+.notice-box a:hover {
+    color: var(--link-hover-color);
+}
+
+
+/* Footer Styles */
+.main-footer {
+    background-color: var(--color-secondary);
+}
+
+.main-footer .text-primary {
+    color: var(--color-accent) !important;
+}
+
+.main-footer a.text-white-50:hover {
+    color: #ffffff !important;
+    text-decoration: underline;
+}
+
+.main-footer .btn-floating:hover {
+    transform: scale(1.1);
+    transition: var(--transition-base);
+}

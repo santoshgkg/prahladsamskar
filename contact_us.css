@@ -1,0 +1,80 @@
+/* contact_us.css */
+
+/* Page Header Styling */
+.page-header {
+    padding: 6rem 0;
+    background-image: linear-gradient(rgba(154, 41, 106, 0.7), rgba(240, 142, 27, 0.5)), url('assets/background_image_for_contact_u_1_fff5f626.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.page-header h1 {
+    color: #ffffff; /* Override default h1 color */
+    font-family: var(--font-family-serif);
+}
+
+/* Contact Information Panel Styling */
+.contact-info-list .icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: var(--bg-color);
+    border: 2px solid var(--color-primary);
+    border-radius: 50%;
+    color: var(--color-primary);
+    font-size: 1.25rem;
+    flex-shrink: 0; 
+    transition: all 0.3s ease;
+}
+
+.contact-info-list li:hover .icon-box {
+    background-color: var(--color-primary);
+    color: #ffffff;
+}
+
+.contact-info-list a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-info-list a:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
+/* Form Styling */
+.card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg) !important;
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--text-color-muted);
+}
+
+.form-control:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 0.25rem var(--focus-ring-color);
+}
+
+#submitButton {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Footer Adjustments */
+footer a.text-muted:hover {
+    color: var(--color-primary) !important;
+    text-decoration: underline;
+}
